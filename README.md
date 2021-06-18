@@ -1,24 +1,40 @@
-# README
+# Hometime Skill Assessment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Prerequisites
 
-Things you may want to cover:
+This project expects following tools installed on the system.
 
-* Ruby version
+- Ruby 2.6.6
+- Postgres 9.6+
 
-* System dependencies
+##### 1. Check out the repository
 
-* Configuration
+##### 2. Install dependencies
 
-* Database creation
+Using [Bundler](https://github.com/bundler/bundler):
 
-* Database initialization
+```shell
+bundle install
+```
 
-* How to run the test suite
+##### 3. Modify database.yml file according to your DB credentials
 
-* Services (job queues, cache servers, search engines, etc.)
+##### 4. Create and setup the database
 
-* Deployment instructions
+Run the following commands to create and setup the database.
 
-* ...
+```bash
+bundle exec rake db:create
+bundle exec rake db:setup
+```
+
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```bash
+bundle exec rails s
+```
+
+And now you can make POST request to the URL http://localhost:3000/reservations
+
